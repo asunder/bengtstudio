@@ -3,137 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transform your space with professional interior design services.">
-    <title>Bengt|Studio</title>
+    <title>Single Page Website</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .hero {
-            background: url('https://s3.us-west-2.amazonaws.com/bengt.studio/BengtStudio.jpeg') no-repeat center center/cover;
-            height: 300px;
+        .header {
+            background-color: white;
+            color: rgb(74, 95, 124, 1);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .header a {
+            color: rgb(74, 95, 124, 1);
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .quote {
+            text-align: center;
+            padding: 100px 20px;
             color: white;
-            text-align: center;
+            background-size: cover;
+            background-position: center;
         }
-        .hero h2 {
-            font-size: 2.5em;
-            margin: 0;
+        .about {
+            padding: 50px 20px;
+			background-color: rgb(74, 95, 124, 1);
+            color: white;
         }
-        .services {
-            padding: 40px 20px;
-            background-color: #fff;
-            text-align: center;
-        }
-        .services h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .service-items {
+        .about-top {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .service-item {
-            background-color: #fafafa;
-            padding: 20px;
-            width: 250px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .service-item h3 {
-            font-size: 1.5em;
-            margin-top: 10px;
-        }
-        .cta {
-            background-color: #333;
+            gap: 20px;
+			background-color: rgb(74, 95, 124, 1);
             color: white;
-            padding: 40px 20px;
-            text-align: center;
         }
-        .cta h2 {
-            font-size: 2em;
-            margin: 0;
+        .collage {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+			background-color: rgb(74, 95, 124, 1);
+            color: white;
         }
-        .cta p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-        .cta button {
-            padding: 12px 24px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #e87c3d;
-            border: none;
+        .collage img {
+            width: 100%;
             border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+			background-color: rgb(74, 95, 124, 1);
+            color: white;
         }
-        .cta button:hover {
-            background-color: #d66a2c;
+        .services-list {
+            flex: 1;
+			background-color: rgb(74, 95, 124, 1);
+            color: white;
         }
-        footer {
-            background-color: #333;
-            color: #fff;
+        .about-bottom {
+            margin-top: 30px;
+            background-color: rgb(74, 95, 124, 1);
+            color: white;
             padding: 20px;
-            text-align: center;
+            border-radius: 5px;
+        }
+        .about-bottom p {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Bengt|Studio</h1>
-    <p>...</p>
-</header>
-
-<div class="hero">
-    <h2>...</h2>
-</div>
-
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-items">
-        <div class="service-item">
-            <h3>Residential Design</h3>
-            <p>Creating comfortable and stylish homes that reflect your personality.</p>
+    <!-- Header Section -->
+    <div class="header">
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
         </div>
-        <div class="service-item">
-            <h3>Commercial Design</h3>
-            <p>Innovative designs for offices, retail spaces, and more.</p>
-        </div>
-        <div class="service-item">
-            <h3>Consultation</h3>
-            <p>Expert advice to guide you through your interior design journey.</p>
+        <div>
+            <img src="https://s3.us-west-2.amazonaws.com/bengt.studio/BengtStudio.jpg" alt="Logo" style="height: 100px;">
         </div>
     </div>
-</section>
 
-<section class="cta">
-    <h2>Ready to Transform Your Space?</h2>
-    <p>Contact us today and let us help you create the home or office of your dreams.</p>
-    <button onclick="window.location.href='mailto:sbengtstudio@gmail.com'">Get In Touch</button>
-</section>
+    <!-- Quote Section -->
+    <div id="home" class="quote" style="background-image: url('https://s3.us-west-2.amazonaws.com/bengt.studio/quote_background.jpg');">
+        <h1>“Design is Thinking, made Visual” – Saul Bass</h1>
+    </div>
 
-<footer>
-    <p>&copy; 2024 Bengt Studio. All Rights Reserved.</p>
-</footer>
-
+    <!-- About Section -->
+    <div id="about" class="about">
+        <!-- Top Area -->
+        <div class="about-top">
+                        <!-- Services List -->
+            <div class="services-list">
+                <h2>Our Services</h2>
+                <ul>
+                    <li>Full-Service Workplace Interior Planning & Design</li>
+                    <li>Workplace Tenant Improvements</li>
+                    <li>Office Landlord Representation</li>
+					<li>Office Building Amenity Space Design</li>
+                    <li>Construction Documents & Permitting</li>
+                    <li>Custom Architectural Detailing</li>
+					<li>Consulting for Design & Architecture Firms</li>
+                </ul>
+            </div>
+            <!-- Collage -->
+            <div class="collage">
+                <img src="https://s3.us-west-2.amazonaws.com/bengt.studio/collage.jpg" alt="Collage">
+            </div>
+        </div>
+		
+        <!-- Nutshell -->
+        <div class="nutshell">
+            <h2>BENGT STUDIO IN A NUTSHELL</h2>
+			<p>Clean: I design workplaces that are appealing, functional, and uncomplicated.</p>
+			<p>Thoughtful: My approach to workplace design is aligning functionality, aesthetics based on your unique
+				brand, and the specific needs of your organization’s work style.</p>
+			<p>No-Nonsense: My no-nonsense style is about delivering value, emphasizing functionality without sacrificing aesthetics, and intending to maximize the space’s potential without overcomplicating the process.</p>
+        </div>
+		
+		
+        <!-- Bottom Area -->
+        <div class="about-bottom">
+            <h2>About Us</h2>
+            <p>Stacy Bengtson has over 20 years of experience designing commercial workplace interiors, primarily in Portland, OR, with a formative stint in NYC. With a strong foundation in building code and a background in Design & Fine Art, Stacy combines technical expertise with a creative mindset to deliver thoughtful and functional workspaces. She excels at building long-term client relationships through her industrious work ethic and fresh perspective, approaching every project with a beginner’s mindset and an unwavering commitment to creating quality work.</p>
+          <p>Contact us at:&nbsp;</p>
+            <p><strong>Stacy Bengtson, <br>
+            NCIDQ, LEED AP <br>
+            sbengtstudio@gmail.com <br>
+            971.274.1321 <br>
+            © All Rights Reserved 2025</strong></p>
+        </div>
+    </div>
 </body>
 </html>
