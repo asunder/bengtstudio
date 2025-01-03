@@ -5,10 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Page Website</title>
     <style>
+        /* Font-face declaration for Swissel font */
+        @font-face {
+            font-family: 'Swissel';
+            src: url('fonts/swissel.woff2') format('woff2'),
+                 url('fonts/swissel.woff') format('woff'),
+                 url('fonts/swissel.ttf') format('truetype');
+        }
+
+        /* Apply the Swissel font to the body and headings */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Swissel', Arial, sans-serif;
         }
+        h1, h2, p, ul, li, a {
+            font-family: 'Swissel', Arial, sans-serif;
+        }
+
         .header {
             background-color: white;
             color: rgb(74, 95, 124, 1);
@@ -22,7 +35,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .header a {
-            color: rgb(74, 95, 124, 1);
+            color: rgb(14, 43, 73, 1);
             text-decoration: none;
             margin: 0 10px;
             font-weight: bold;
@@ -33,46 +46,44 @@
         .quote {
             text-align: center;
             padding: 100px 20px;
-            color: white;
+            color: rgb(14, 43, 73, 1);
             background-size: cover;
             background-position: center;
         }
         .about {
-            padding: 50px 20px;
-			background-color: rgb(74, 95, 124, 1);
+            background-color: rgb(74, 95, 124, 1);
             color: white;
         }
         .about-top {
             display: flex;
             gap: 20px;
-			background-color: rgb(74, 95, 124, 1);
+            background-color: rgb(74, 95, 124, 1);
             color: white;
         }
         .collage {
             flex: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-			background-color: rgb(74, 95, 124, 1);
-            color: white;
         }
         .collage img {
             width: 100%;
             border-radius: 5px;
-			background-color: rgb(74, 95, 124, 1);
-            color: white;
         }
         .services-list {
+            background-color: rgb(74, 95, 124, 1);
             flex: 1;
-			background-color: rgb(74, 95, 124, 1);
-            color: white;
         }
         .about-bottom {
-            margin-top: 30px;
-            background-color: rgb(74, 95, 124, 1);
+            margin-top: 0px;
+            background-color: rgb(14, 43, 73, 1);
             color: white;
-            padding: 20px;
-            border-radius: 5px;
+            padding: 10px;
+        }
+        .nutshell {
+            margin-top: 10px;
+            background-color: rgb(14, 43, 73, 1);
+            color: white;
+            padding: 10px;
         }
         .about-bottom p {
             margin: 10px 0;
@@ -87,12 +98,12 @@
             <a href="#about">About</a>
         </div>
         <div>
-            <img src="https://s3.us-west-2.amazonaws.com/bengt.studio/BengtStudio.jpg" alt="Logo" style="height: 100px;">
+            <img src="images/bengtstudio.jpg" alt="Logo" style="height: 100px;">
         </div>
     </div>
 
     <!-- Quote Section -->
-    <div id="home" class="quote" style="background-image: url('https://s3.us-west-2.amazonaws.com/bengt.studio/quote_background.jpg');">
+    <div id="home" class="quote" style="background-image: url('images/backgroundimage.jpg');">
         <h1>“Design is Thinking, made Visual” – Saul Bass</h1>
     </div>
 
@@ -100,45 +111,62 @@
     <div id="about" class="about">
         <!-- Top Area -->
         <div class="about-top">
-                        <!-- Services List -->
+            <!-- Services List -->
             <div class="services-list">
                 <h2>Our Services</h2>
                 <ul>
                     <li>Full-Service Workplace Interior Planning & Design</li>
+                    <p></p>
                     <li>Workplace Tenant Improvements</li>
+                    <p></p>
                     <li>Office Landlord Representation</li>
-					<li>Office Building Amenity Space Design</li>
+                    <p></p>
+                    <li>Office Building Amenity Space Design</li>
+                    <p></p>
                     <li>Construction Documents & Permitting</li>
+                    <p></p>
                     <li>Custom Architectural Detailing</li>
-					<li>Consulting for Design & Architecture Firms</li>
+                    <p></p>
+                    <li>Consulting for Design & Architecture Firms</li>
                 </ul>
             </div>
             <!-- Collage -->
             <div class="collage">
-                <img src="https://s3.us-west-2.amazonaws.com/bengt.studio/collage.jpg" alt="Collage">
+                <img src="images/collage.jpg" alt="Collage" style="height: 495px; width: 713px;">
             </div>
         </div>
-		
-        <!-- Nutshell -->
-        <div class="nutshell">
-            <h2>BENGT STUDIO IN A NUTSHELL</h2>
-			<p>Clean: I design workplaces that are appealing, functional, and uncomplicated.</p>
-			<p>Thoughtful: My approach to workplace design is aligning functionality, aesthetics based on your unique
-				brand, and the specific needs of your organization’s work style.</p>
-			<p>No-Nonsense: My no-nonsense style is about delivering value, emphasizing functionality without sacrificing aesthetics, and intending to maximize the space’s potential without overcomplicating the process.</p>
+       <!-- Nutshell -->
+<div class="nutshell">
+    <h2 style="text-align: center;">Bengt Studio in a Nutshell</h2>
+    <div style="display: flex; justify-content: space-between;">
+        <!-- Clean Section -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h3>Clean</h3>
+            <p>I design workplaces that are appealing, functional, and uncomplicated.</p>
         </div>
-		
-		
+        <!-- Thoughtful Section -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h3>Thoughtful</h3>
+            <p>My approach to workplace design aligns functionality and aesthetics based on your unique brand and the specific needs of your organization’s work style.</p>
+        </div>
+        <!-- No-Nonsense Section -->
+        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center;">
+            <h3>No-Nonsense</h3>
+            <p>My no-nonsense style delivers value, emphasizing functionality without sacrificing aesthetics and maximizing the space’s potential without overcomplicating the process.</p>
+        </div>
+    </div>
+</div>
         <!-- Bottom Area -->
         <div class="about-bottom">
-            <h2>About Us</h2>
+            <h2 style="text-align: center;">About Us</h2>
             <p>Stacy Bengtson has over 20 years of experience designing commercial workplace interiors, primarily in Portland, OR, with a formative stint in NYC. With a strong foundation in building code and a background in Design & Fine Art, Stacy combines technical expertise with a creative mindset to deliver thoughtful and functional workspaces. She excels at building long-term client relationships through her industrious work ethic and fresh perspective, approaching every project with a beginner’s mindset and an unwavering commitment to creating quality work.</p>
-          <p>Contact us at:&nbsp;</p>
-            <p><strong>Stacy Bengtson, <br>
-            NCIDQ, LEED AP <br>
-            sbengtstudio@gmail.com <br>
-            971.274.1321 <br>
-            © All Rights Reserved 2025</strong></p>
+            <p></p>
+            <p></p>
+            <p>Contact us:&nbsp;</p>
+            <p><strong>Stacy Bengtson, NCIDQ, LEED AP<br>
+                sbengtstudio@gmail.com <br>
+                971.274.1321 <br></strong></p>
+                <p style="text-align: right"><strong>© All Rights Reserved 2025</strong></p>
         </div>
     </div>
 </body>
