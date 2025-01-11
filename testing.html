@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bengt Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: 'Swissel';
+            src: url('fonts/swissel.woff2') format('woff2'),
+                 url('fonts/swissel.woff') format('woff'),
+                 url('fonts/swissel.ttf') format('truetype');
+        }
+        body {
+            margin: 0;
+            font-family: 'Swissel', Arial, sans-serif;
+        }
+        .header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .quote {
+            text-align: center;
+            padding: 100px 20px;
+            background-size: cover;
+            background-position: center;
+            color: rgb(14, 43, 73, 1);
+        }
+        .about {
+            background-color: rgb(74, 95, 124);
+            color: white;
+        }
+        .collage img {
+            border-radius: 5px;
+        }
+        .nutshell, .about-bottom {
+            padding: 20px;
+            background-color: rgb(14, 43, 73);
+            color: white;
+        }
+        .nutshell h3, .about-bottom h2 {
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .services-list {
+                text-align: left;
+            }
+            .collage img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header d-flex justify-content-between align-items-center p-3">
+        <div>
+            <a href="#home" class="text-decoration-none mx-2">Home</a>
+            <a href="#about" class="text-decoration-none mx-2">About</a>
+        </div>
+        <div>
+            <img src="images/bengtstudio.jpg" alt="Logo" class="img-fluid" style="height: 100px;">
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div id="home" class="quote" style="background-image: url('images/backgroundimage.jpg');">
+        <h2>“Design is Thinking, made Visual” – Saul Bass</h2>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="about">
+        <div class="container">
+            <!-- Top Area -->
+            <div class="row py-5">
+                <!-- Services List -->
+                <div class="col-md-6">
+                    <h2 class="text-center">Our Services</h2>
+                    <ul class="list-unstyled">
+                        <li>Full-Service Workplace Interior Planning & Design</li>
+                        <li>Workplace Tenant Improvements</li>
+                        <li>Office Landlord Representation</li>
+                        <li>Office Building Amenity Space Design</li>
+                        <li>Construction Documents & Permitting</li>
+                        <li>Custom Architectural Detailing</li>
+                        <li>Consulting for Design & Architecture Firms</li>
+                    </ul>
+                </div>
+                <!-- Collage -->
+                <div class="col-md-6 collage">
+                    <img src="images/collage.jpg" alt="Collage" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+        <!-- Nutshell Section -->
+        <div class="nutshell">
+            <h2>Bengt Studio in a Nutshell</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <h3>Clean</h3>
+                    <p>I design workplaces that are appealing, functional, and uncomplicated.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>Thoughtful</h3>
+                    <p>My approach to workplace design aligns functionality and aesthetics with your unique brand and organizational needs.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h3>No-Nonsense</h3>
+                    <p>My no-nonsense style emphasizes functionality and aesthetics, maximizing the space’s potential.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Bottom Section -->
+        <div class="about-bottom">
+            <h2>About Us</h2>
+            <p>Stacy Bengtson has over 20 years of experience designing commercial workplace interiors, primarily in Portland, OR...</p>
+            <h2>Contact Information</h2>
+            <p class="text-center">
+                <strong>Stacy Bengtson, NCIDQ, LEED AP<br>
+                sbengtstudio@gmail.com<br>
+                971.274.1321</strong>
+            </p>
+            <p class="text-end"><strong>© All Rights Reserved 2025</strong></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
