@@ -19,6 +19,7 @@
         body {
             margin: 0;
             font-family: 'Swissel', Arial, sans-serif;
+            line-height: 1.6; /* Improve readability */
         }
         h1, h2, p, ul, li, a {
             font-family: 'Swissel', Arial, sans-serif;
@@ -26,90 +27,90 @@
         .logo {
             max-width: 35%; /* Ensures the image never exceeds its container width */
             height: auto;    /* Maintains the aspect ratio */
-            padding: 10px 10px;
+            padding: 10px;
         }
         .header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             background-color: white;
-            color: rgb(74, 95, 124, 1);
-            align-items: center;
+            align-items: right;
             position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             max-width: 100%; /* Ensures the image never exceeds its container width */
             height: auto;    /* Maintains the aspect ratio */
-            padding: 10px 10px;
-        }
-        .header a {
-            color: rgb(14, 43, 73, 1);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .header a:hover {
-            text-decoration: underline;
+            padding: 10px;
+            margin: 0px;
         }
         .quote {
             text-align: center;
-            padding: 100px 20px;
             background-size: cover;
             background-position: center;
+            margin: 0px; /* Add margin to separate from other sections */
+            padding: 100px; /* Add padding for better spacing */
         }
         .services {
-            display: flex;
-            gap: 20px;
             background-color: rgb(74, 95, 124, 1);
             color: white;
+            padding: 10px; /* Add padding for better spacing */
+            margin: 0px; /* Add margin to separate from other sections */
         }
         .collage {
             margin-top: 10px;
-            padding: 0px 10px;
+            margin: 0px; /* Add margin to separate from other sections */
+            padding: 10px; /* Add padding for better spacing */
             flex: 1;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
         .collage img {
             width: 100%;
-            border-radius: 5px;
         }
         .contact {
             background-color: rgb(14, 43, 73, 1);
             color: white;
-            padding: 10px;
+            padding: 10px; /* Add padding for better spacing */
+            margin: 0px; /* Add margin to separate from other sections */
         }
         .nutshell {
             background-color: rgb(14, 43, 73, 1);
             color: white;
+            padding: 10px; /* Add padding for better spacing */
+            margin: 0px; /* Add margin to separate from other sections */
         }
-        .contact p {
-            margin: 10px 0;
+        .about {
+            background-color: rgb(14, 43, 73, 1);
+            color: white;
+            padding: 10px; /* Add padding for better spacing */
+            margin: 0px; /* Add margin to separate from other sections */
+        }
+        .nav-links a {
+            margin-left: 10px;
+            text-decoration: underline;
+            color: rgb(14, 43, 73, 1);
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <!-- Header Section -->
-        <div class="header"> 
+    <div id="home" class="header">
+        <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <img src="images/bengtstudio.jpg" alt="Logo" class="logo">
         </div>
+        <img src="images/bengtstudio.jpg" alt="Logo" class="logo">
     </div>
     <!-- Quote Section -->
-    <div id="home" class="quote" style="background-image: url('images/backgroundimage.jpg');">
+    <div class="quote" style="background-image: url('images/backgroundimage.jpg');">
         <h5>“Design is Thinking, made Visual” – Saul Bass</h5>
     </div>
-    <!-- Services and Collage Section -->
-    <div class="about">
-        <!-- Top Area -->
-        <div class="services">
-            <!-- Services List and Collage -->
-            <div class="container my-5">
-                <div class="row image-text-container align-items-center">
-                    <div class="col-md-6 text-content">
-                        <h2 style="text-align: center;">Services</h2>
+<!-- Services and Collage Section -->
+    <div class="services">
+        <!-- Services List and Collage -->
+            <div class="row image-text-container align-items-center">
+                <div class="col-md-6 text-content">
+                    <h2 style="text-align: center;">Services</h2>
                         <ul>
                             <p>Full-Service Workplace Interior Planning & Design</p>
                             <p></p>
@@ -125,13 +126,14 @@
                             <p></p>
                             <p>Consulting for Design & Architecture Firms</p>
                         </ul>
-                    </div>
-            <!-- Collage -->
-                <div class="col-md-6">
-                    <img src="images/collage.jpg" alt="Collage" class="img-fluid">
                 </div>
-            </div>    
-    <!-- Nutshell -->
+            </div>
+         <!-- Collage -->
+            <div class="col-md-6">
+                <img src="images/collage.jpg" alt="Collage" class="img-fluid">
+            </div>
+    </div>
+<!-- Nutshell -->
     <div id="about" class="nutshell">
         <h2 style="text-align: center;">Bengt Studio in a Nutshell</h2>
         <div class="row">
@@ -149,14 +151,17 @@
             </div>
         </div>
     </div>
-    <!-- Bottom Area -->
-    <div class="contact">
+<!-- About -->
+    <div class="about">
         <h2 style="text-align: center;">About Us</h2>
         <p>Stacy Bengtson has over 20 years of experience designing commercial workplace interiors, primarily in Portland, OR, with a formative stint in NYC. With a strong foundation in building code and a background in Design & Fine Art, Stacy combines technical expertise with a creative mindset to deliver thoughtful and functional workspaces. She excels at building long-term client relationships through her industrious work ethic and fresh perspective, approaching every project with a beginner’s mindset and an unwavering commitment to creating quality work.</p>
         <p></p>
         <p></p>
         <p></p>
         <p></p>
+    </div>
+<!-- Contact -->
+    <div class="contact">
         <h2 style="text-align: center;">Contact Information</h2>
         <p style="text-align: center;"><strong>Stacy Bengtson, NCIDQ, LEED AP<br>
                 sbengtstudio@gmail.com <br>
